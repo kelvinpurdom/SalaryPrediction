@@ -30,6 +30,6 @@ pipe = Pipeline([
     ('RandomForestClassifier', model),
 ])
 
-
-y_pred = pipe.predict(X[1:2])
+pipe.fit(X,y)
+y_pred = pipe.predict(X[5:6])
 print(y_pred)
