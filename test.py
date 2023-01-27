@@ -10,7 +10,7 @@ import pickle
 import joblib
 
 
-dataset = pd.read_csv('raw_data/salary.csv')
+dataset = pd.read_csv('data/salary.csv')
 dropped_columns = ['fnlwgt', 'education-num', 'capital-gain', 'capital-loss']
 df = dataset.drop(columns= dropped_columns)
 
@@ -32,4 +32,5 @@ pipe = Pipeline([
 
 pipe.fit(X,y)
 y_pred = pipe.predict(X[5:6])
-print(y_pred)
+print(X[5:6])
+#print(y_pred)
