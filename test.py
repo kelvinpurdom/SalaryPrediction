@@ -31,11 +31,13 @@ pipe = Pipeline([
 ])
 
 pipe.fit(X,y)
-#y_pred = pipe.predict(pd.DataFrame[[39,'State-gov','Bachelors', 'Never-married','Adm-clerical',	'Not-in-family','White', 'Male', 40, 'United-States']],columns=['age', 'workclass', 'education', 'marital-status', 'occupation','relationship', 'race', 'sex', 'hours-per-week', 'native-country'])
-#print(X[5:6])
+
 ex = pd.DataFrame([[39,'State-gov','Bachelors', 'Never-married',
                       'Adm-clerical',	'Not-in-family',
                       'White', 'Male', 40, 'United-States']],
-                  columns=['age', 'workclass', 'education', 'marital-status', 'occupation','relationship', 'race', 'sex', 'hours-per-week', 'native-country'])
+                  columns=['age', 'workclass', 'education',
+                           'marital-status', 'occupation',
+                           'relationship', 'race', 'sex',
+                           'hours-per-week', 'native-country'])
 y_pred = pipe.predict(ex)
 print(y_pred)
