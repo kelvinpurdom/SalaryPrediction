@@ -5,20 +5,20 @@ from prediction import predict
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    age = st.number_input('Age:', min_value=0.0, max_value=64.0, value=1.0, step= 0.05)
-    workclass= st.selectbox('Workclass:', ['Convex', 'Flat', 'Sunken'])
-    education = st.selectbox('Education:', ['Convex', 'Flat', 'Sunken'])
+    age = st.number_input('Age:', min_value=17, max_value=90, value=35, step= 1)
+    workclass= st.selectbox('Workclass:', [' State-gov', ' Self-emp-not-inc', ' Private', ' Federal-gov',' Local-gov', ' ?', ' Self-emp-inc', ' Without-pay',' Never-worked'])
+    education = st.selectbox('Education:', [' Bachelors', ' HS-grad', ' 11th', ' Masters', ' 9th',' Some-college', ' Assoc-acdm', ' Assoc-voc', ' 7th-8th',' Doctorate', ' Prof-school', ' 5th-6th', ' 10th', ' 1st-4th',' Preschool', ' 12th'])
 
 with col2:
-    marital_status = st.selectbox('Marital Status:', ['Convex', 'Flat', 'Sunken'])
-    occupation = st.selectbox('Occupation:', ['Convex', 'Flat', 'Sunken'])
-    relationship = st.selectbox('Relationship:', ['Convex', 'Flat', 'Sunken'])
-    race = st.selectbox('Race:', ['Convex', 'Flat', 'Sunken'])
+    marital_status = st.selectbox('Marital Status:', [[' Never-married', ' Married-civ-spouse', ' Divorced',' Married-spouse-absent', ' Separated', ' Married-AF-spouse',' Widowed']])
+    occupation = st.selectbox('Occupation:', [' Adm-clerical', ' Exec-managerial', ' Handlers-cleaners',' Prof-specialty', ' Other-service', ' Sales', ' Craft-repair',' Transport-moving', ' Farming-fishing', ' Machine-op-inspct',' Tech-support', ' ?', ' Protective-serv', ' Armed-Forces',' Priv-house-serv'])
+    relationship = st.selectbox('Relationship:', [' Not-in-family', ' Husband', ' Wife', ' Own-child', ' Unmarried',' Other-relative'])
+    race = st.selectbox('Race:', [' White', ' Black', ' Asian-Pac-Islander', ' Amer-Indian-Eskimo',' Other'])
 
 
 with col3:
     sex = st.selectbox('Sex:', ['Convex', 'Flat', 'Sunken'])
-    hours_per_week = st.number_input('Hours Per Week:', min_value=0.0, max_value=34.0, value=1.0,step= 0.05)
+    hours_per_week = st.number_input('Hours Per Week:', min_value=0, max_value=99, value=40,step= 1)
     native_country = st.selectbox('Native Country:', ['Convex', 'Flat', 'Sunken'])
 
 
