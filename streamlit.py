@@ -5,26 +5,26 @@ from prediction import predict
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    age = st.number_input('Cap-diameter(cm):', min_value=0.0, max_value=64.0, value=1.0, step= 0.05)
-    workclass= st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
-    education = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
+    age = st.number_input('Age:', min_value=0.0, max_value=64.0, value=1.0, step= 0.05)
+    workclass= st.selectbox('Workclass:', ['Convex', 'Flat', 'Sunken'])
+    education = st.selectbox('Education:', ['Convex', 'Flat', 'Sunken'])
 
 with col2:
-    marital_status = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
-    occupation = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
-    relationship = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
-    race = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
+    marital_status = st.selectbox('Marital Status:', ['Convex', 'Flat', 'Sunken'])
+    occupation = st.selectbox('Occupation:', ['Convex', 'Flat', 'Sunken'])
+    relationship = st.selectbox('Relationship:', ['Convex', 'Flat', 'Sunken'])
+    race = st.selectbox('Race:', ['Convex', 'Flat', 'Sunken'])
 
 
 with col3:
-    sex = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
-    hours_per_week = st.number_input('Stem Width(cm):', min_value=0.0, max_value=34.0, value=1.0,step= 0.05)
-    native_country = st.selectbox('Cap Shape:', ['Convex', 'Flat', 'Sunken'])
+    sex = st.selectbox('Sex:', ['Convex', 'Flat', 'Sunken'])
+    hours_per_week = st.number_input('Hours Per Week:', min_value=0.0, max_value=34.0, value=1.0,step= 0.05)
+    native_country = st.selectbox('Native Country:', ['Convex', 'Flat', 'Sunken'])
 
 
-st.button('Predict type of Iris')
 
-if st.button('Predict type of Iris'):
+
+if st.button('Predict Salary'):
    result = predict(np.array([[age, workclass, education,
                            marital_status, occupation,
                            relationship, race, sex,
