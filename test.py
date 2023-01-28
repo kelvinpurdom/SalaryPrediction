@@ -40,4 +40,4 @@ ex = pd.DataFrame([[39,'State-gov','Bachelors', 'Never-married',
                            'relationship', 'race', 'sex',
                            'hours-per-week', 'native-country'])
 y_pred = pipe.predict(ex)
-print(y_pred)
+print(y_pred[0])
