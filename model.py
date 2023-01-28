@@ -6,7 +6,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-import pickle
 import joblib
 from sklearn.metrics import accuracy_score
 
@@ -20,7 +19,7 @@ dropped_columns = ['fnlwgt', 'education-num', 'capital-gain', 'capital-loss']
 df = dataset.drop(columns= dropped_columns)
 
 X = df.drop('salary', axis=1)
-y = df['salary']
+y = df[['salary']]
 
 # split data into train and test sets
 # 70% training and 30% test
@@ -45,7 +44,7 @@ y_pred = pipe.predict(X_test)
 
 # calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy}")  # Accuracy: 0.91
+print(f"Accuracy: {accuracy}")
 
 
 joblib.dump(pipe, 'test_rf_model.sav')
