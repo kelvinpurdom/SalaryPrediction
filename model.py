@@ -23,8 +23,7 @@ y = df[['salary']]
 
 # split data into train and test sets
 # 70% training and 30% test
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=seed, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=seed, stratify=y)
 
 preprocessor = ColumnTransformer([
     ('num_encoder', StandardScaler(), make_column_selector(dtype_include="int64")),
