@@ -58,6 +58,6 @@ if st.button('Predict Salary'):
                                  columns= ['age', 'workclass', 'education',
                                            'marital-status', 'occupation',
                                            'relationship', 'race', 'sex',
-                                           'hours-per-week', 'native-country','salary'
+                                           'hours-per-week', 'native-country'
                                            ]))
    st.text(result[0])
