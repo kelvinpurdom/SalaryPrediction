@@ -51,19 +51,13 @@ with col3:
 
 
 if st.button('Predict Salary'):
-   result = predict(np.array([[age, workclass, education,
+   result = predict(pd.DataFrame([[age, workclass, education,
                            marital_status, occupation,
                            relationship, race, sex,
-                           hours_per_week, native_country]]))
+                           hours_per_week, native_country]],
+                                 columns= ['age', 'workclass', 'education',
+                                           'marital-status', 'occupation',
+                                           'relationship', 'race', 'sex',
+                                           'hours-per-week', 'native-country','salary'
+                                           ]))
    st.text(result[0])
-
-
-
-
-   ex = pd.DataFrame([[39,'State-gov','Bachelors', 'Never-married',
-                      'Adm-clerical',	'Not-in-family',
-                      'White', 'Male', 40, 'United-States']],
-                  columns=['age', 'workclass', 'education',
-                           'marital-status', 'occupation',
-                           'relationship', 'race', 'sex',
-                           'hours-per-week', 'native-country'])
