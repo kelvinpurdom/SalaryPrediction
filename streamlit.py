@@ -5,6 +5,10 @@ from prediction import predict
 
 
 st.title('Salary Predictor')
+st.subtitle('''The aim of this project, is to use data from kaggle salary.csv,
+            and the Random Forest Classifier, to predict if someones
+            salary will be less, or more the 50K per annmum.
+            This is a test project for a later exploration of poisonous mushrooms.''')
 
 col1, col2, col3 = st.columns(3)
 with col1:
