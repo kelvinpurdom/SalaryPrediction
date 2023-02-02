@@ -63,4 +63,7 @@ if st.button('Predict Salary'):
                                            'relationship', 'race', 'sex',
                                            'hours-per-week', 'native-country'
                                            ]))
-   st.text(result[0])
+   if result[0] == ' >50k':
+       st.text('You will probably earn more than 50K')
+   else:
+       st.text('You will probably earn less than 50K')
