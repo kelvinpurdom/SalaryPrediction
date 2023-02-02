@@ -68,7 +68,10 @@ if st.button('Predict Salary'):
                                            'relationship', 'race', 'sex',
                                            'hours-per-week', 'native-country'
                                            ]))
-   if result[0] == ' >50k':
-       st.subheader('You will probably earn more than 50K')
-   else:
+   if result[0] == ' <=50K':
        st.subheader('You will probably earn less than 50K')
+   elif result[0] == ' >50K':
+       st.subheader('You will probably earn more than 50K')
+
+   else:
+       st.markdown('error')
