@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from prediction import predict
 
+
+st.title('Salary Predictor')
+
 col1, col2, col3 = st.columns(3)
 with col1:
     age = st.number_input('Age:', min_value=17, max_value=90, value=35, step= 1)
