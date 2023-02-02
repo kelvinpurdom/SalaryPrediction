@@ -5,7 +5,8 @@ from prediction import predict
 
 
 st.title('Salary Predictor')
-st.subtitle('''The aim of this project, is to use data from kaggle salary.csv,
+st.subheader('Created by Kelvin Purdom')
+st.markdown('''The aim of this project, is to use data from kaggle salary.csv,
             and the Random Forest Classifier, to predict if someones
             salary will be less, or more the 50K per annmum.
             This is a test project for a later exploration of poisonous mushrooms.''')
@@ -68,6 +69,6 @@ if st.button('Predict Salary'):
                                            'hours-per-week', 'native-country'
                                            ]))
    if result[0] == ' >50k':
-       st.text('You will probably earn more than 50K')
+       st.subheader('You will probably earn more than 50K')
    else:
-       st.text('You will probably earn less than 50K')
+       st.subheader('You will probably earn less than 50K')
